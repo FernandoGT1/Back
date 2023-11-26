@@ -51,7 +51,7 @@ app.get('/obtenerMedicina',(request,response)=>{
         return response.json({medicina: result})
     })
 })
-
+///////////////
 app.post('/registrarReceta',(request, response)=>{
     const sql = `INSERT INTO medicamentos (medicina_id, dosis, tiempo, fecha, comentarios) VALUES ( '${request.body.medicina_id}','${request.body.dosis}', '${request.body.tiempo}', '${request.body.fecha}', '${request.body.comentarios}')`;
     conexion.query(sql, (error,resultado)=>{
